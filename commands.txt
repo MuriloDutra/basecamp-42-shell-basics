@@ -153,3 +153,16 @@
 		a // It prints 50
 
 	OBS: type 'quit' when you're all done with math
+
+(ln):	*Suggestion*: first read the file hard-links-and-soft-links.txt.
+	  	ln is a command-line utility for creating links between files.
+	  		EXAMPLES:
+				ln firstFile.txt secondFile.txt //It will create a HARD link between firstFile.txt and secondFile.txt
+				ln -s firstFile.txt secondFile.txt //It will create a SOFT link between firstFile.txt and secondFile.txt
+
+		OBS:
+			1 - To overwrite the destination path of the symlink, use the -f (--force) option.
+			2 - To delete/remove symbolic links use either the unlink or rm command
+				EXAMPLES:
+					unlink file.txt
+					rm file.txt
