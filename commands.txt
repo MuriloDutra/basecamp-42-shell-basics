@@ -60,7 +60,7 @@
 		touch myNewFile.txt
 
 (touch -t): It changes the date of a file
-	EXAMPLES: touch -t 201509191030 file.txt
+	EXAMPLES: touch -t 201509191030 file.txt //Date format: YYYY/MM/DD HH:mm
 	OBS: If the date it's six months before OR in the future of the current date, the hour does not appear
 
 (sh): It opens a sub-shell
