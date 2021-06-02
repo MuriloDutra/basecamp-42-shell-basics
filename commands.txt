@@ -10,14 +10,34 @@
 
 (ls -p): it shows folders and files
 
+(ls -t): it shows the folders and files from the newer ones to the older ones
+
+(ls -r): It reverses the output of 'ls'
+
+(ls -m): It adds a comma (,) in the end of any folder/file
+
+(ls -F): Use the classify option, and ls will append one of these to each listing entry:
+		/ A directory
+		@ A symlink
+		| A named pipe
+		= A socket
+		* An executable files
+
+(ls -la): it shows hidden folders and files
+
+(ls > file.txt): It writes the output of 'ls' in a file
+	OBS: If the file you choose has already a content, this content will be over override by the output of 'ls'
+
+(ls fileThatDoesNotExist 2> error.log): It writes the error message in error.log 
+
+(ls fileThatDoesNotExist 2> error.log | grep .txt > success.log): It writes the error message in error.log and success message in success.log
+
 (pwd): it shows the current directory
 
 (cd): it navigates to a directory
 	EXAMPLES: cd myFolder
 
 (cd ..): it returns to the above/earlier directory
-
-(ls -la): it shows hidden folders and files
 
 (rmdir): it deletes a directory. ONLY works if the folder is empty
 	EXAMPLES:
@@ -118,12 +138,6 @@
 	EXAMPLES:
 		ls | grep .txt
 
-(ls > file.txt): It writes the output of 'ls' in a file
-	OBS: If the file you choose has already a content, this content will be over override by the output of 'ls'
-
-(ls fileThatDoesNotExist 2> error.log): It writes the error message in error.log 
-
-(ls fileThatDoesNotExist 2> error.log | grep .txt > success.log): It writes the error message in error.log and success message in success.log
 
 (cat success.log | grep .txt | wc -l): It shows the content of success.log, then searches by the expression '.txt' and then it counts how many of them are
 
