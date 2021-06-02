@@ -184,3 +184,17 @@
 (cp): It copies files
 	EXAMPLES:
 		cp file file02
+
+(diff): It compares two files
+	EXAMPLES:
+		diff file.txt file02.txt
+		diff file.txt file02.txt > outputFile //The output goes to 'outputFile'
+
+(patch): It updates a file using the output of the command 'diff'
+	CONTEXT:
+		file.txt -> content: Murilo
+		file02.txt -> content: Dutra
+
+	EXAMPLES:
+		patch file.txt diff_output.txt //New content will be: 'Dutra'
+		patch file02.txt diff_output.txt //New content will be: 'Murilo'
