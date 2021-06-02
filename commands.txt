@@ -198,3 +198,17 @@
 	EXAMPLES:
 		patch file.txt diff_output.txt //New content will be: 'Dutra'
 		patch file02.txt diff_output.txt //New content will be: 'Murilo'
+
+(wget): To download things
+	EXAMPLES: wget https://projects.intra.42.fr/uploads/document/document/2546/resources.tar.gz
+
+(tar):
+	CONTEXT:
+		folder -> file01, file02
+	EXAMPLES:
+		tar -cf allMyFilesHere.tar * //It compacts the files
+		tar -xf allMyFilesHere.tar 	 //It extracts the files
+	OBS:
+		-c: it create a new tar file
+		-x: it extracts the files from .tar
+		-f: it defines the name of .tar
