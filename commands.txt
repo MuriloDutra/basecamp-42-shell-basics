@@ -180,3 +180,7 @@
 				EXAMPLES:
 					unlink file.txt
 					rm file.txt
+
+(cp): It copies files
+	EXAMPLES:
+		cp file file02
