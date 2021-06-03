@@ -32,6 +32,10 @@
 
 (ls fileThatDoesNotExist 2> error.log | grep .txt > success.log): It writes the error message in error.log and success message in success.log
 
+(ls -u): sort by last access date
+
+(ls -p): Adds slash only for folders
+
 (pwd): it shows the current directory
 
 (cd): it navigates to a directory
@@ -155,6 +159,16 @@
 		find . -maxdepth 1 //It prints 'firstFolder/myFile.txt'
 		find . -maxdepth 2 //It prints 'firstFolder/mySecondFolder/hello.txt'
 
+(find . -exec): It executes a command after 'find'
+	EXAMPLES:
+		find . -type f  -name '*.sh' -exec basename -s .sh {} \;
+		find . -type f  -name '*.sh' -exec echo oi ";"
+
+(find . -execdir): It executes a command after 'find'
+	EXAMPLES:
+		find . -type f  -name '*.sh' -execdir basename -s .sh {} \;
+		find . -type f  -name '*.sh' -execdir echo oi ";"
+
 (bc): it's a calculator that you can use in the terminal
 	EXAMPLES:
 		7*5 //It prints 35
@@ -209,6 +223,16 @@
 		tar -cf allMyFilesHere.tar * //It compacts the files
 		tar -xf allMyFilesHere.tar 	 //It extracts the files
 	OBS:
-		-c: it create a new tar file
+		-c: it creates a new tar file
 		-x: it extracts the files from .tar
 		-f: it defines the name of .tar
+
+(tr): translate or delete characters
+	EXAMPLES:
+		tr ' ' ',' //The blank spaces will be replaced by ","
+
+(basename): strip directory and suffix from filenames
+	EXAMPLES:
+		basename -s .html kt.html //Result: kit
+	OBS:
+		-s, – -suffix = SUFFIX option : This option removes a trailing suffix SUFFIX,such as a file extension.
