@@ -82,6 +82,7 @@
 (touch): It creates a new file
 	EXAMPLES:
 		touch myNewFile.txt
+		touch \"\\\?\$\*\'KwaMe\'\*\$\?\\\"
 
 (touch -t): It changes the date of a file
 	EXAMPLES: touch -t 201509191030 file.txt //Date format: YYYY/MM/DD HH:mm
@@ -236,3 +237,25 @@
 		basename -s .html kt.html //Result: kit
 	OBS:
 		-s, – -suffix = SUFFIX option : This option removes a trailing suffix SUFFIX,such as a file extension.
+
+(sed): It reads a file and returns his content
+	EXAMPLES:
+		sed '' file.txt //It shows the content of the file
+		sed -n 'n;p' //It prints one line and skips the next one 
+	OBS:
+		-n: suppresses all output that isn't explicitly printed.
+		'p': prints the current line, without moving to the next line.
+		'n': moves to the next line without printing anything.
+
+(awk): manipulation of texts from a sequence of patterns
+	CONTEXT:
+		file_awk, his content: aluno:x:1001:1001::/home/aluno:/bin/bash
+	EXAMPLES:
+		awk -F: '{print $1}' file_awk //It prints 'aluno'
+		awk -F: '{print $1 ": selected student"}' file_awk //It prints 'aluno: selected student'
+		awk -F: '{print $1 " => "  $7}' file_awk //It prints the first and seventh column with a message between them
+
+	OBS:
+		-F: It defines who is the separator of fields
+		'{print $1}': It selects the first column of the output
+		'{print $1 "some text here"}': It adds a text to the selected column
