@@ -3,6 +3,9 @@
 (clear) or (CTRL + L): it cleans the terminal
 
 (mkdir): it creates a new directory/folder
+	EXAMPLES:
+		mkdir myNewFolder
+		mkdir exercice0{0..8} //It will create NINE folders, like: exercice00, exercice01, exercice02...
 
 (ls): It shows a list of content from the current folder
 
