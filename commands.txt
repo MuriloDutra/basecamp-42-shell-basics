@@ -5,7 +5,7 @@
 (mkdir): it creates a new directory/folder
 	EXAMPLES:
 		mkdir myNewFolder
-		mkdir exercice0{0..8} //It will create NINE folders, like: exercice00, exercice01, exercice02...
+		mkdir exercise{0..8} //It will create NINE folders, like: exercise, exercise, exercise...
 
 (ls): It shows a list of content from the current folder
 
