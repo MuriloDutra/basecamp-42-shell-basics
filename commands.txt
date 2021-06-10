@@ -262,3 +262,7 @@
 		-F: It defines who is the separator of fields
 		'{print $1}': It selects the first column of the output
 		'{print $1 "some text here"}': It adds a text to the selected column
+
+(cmp): It compares the content of two files
+	EXAMPLES:
+		cmp file.txt otherFile.txt
