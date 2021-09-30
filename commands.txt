@@ -270,3 +270,9 @@
 (mv): It renames a file
 	EXAMPLES:
 		mv oldName.txt newName.txt
+
+(mv file newLocation): It moves a file from a location to another
+	EXAMPLES:
+		mv myFile.txt myUser/MyFolder
+	
+	Now myFile.txt it's located in myUser/MyFolder
